@@ -1,0 +1,23 @@
+java:
+    image: java:8u91-jdk
+    volumes:
+        - /usr/lib/jvm/java-8-openjdk-amd64
+
+maven:
+    build: maven
+    volumes:
+        - /usr/share/maven
+
+project:
+    build: tdd-lab
+    volumes:
+        - /home/javadev/tdd-lab
+
+devenv:
+    build: devenv
+    volumes_from:
+        - java
+        - maven
+        - project
+    tty: true
+    stdin_open: true
