@@ -15,7 +15,7 @@
 > ...
 > # docker build output
 > ...
-> docker exec -u 1000 dockerjavadev_devenv_1 bash
+> docker exec -it -u 1000 dockerjavadev_devenv_1 bash
 ```
 
 ## TO DO
